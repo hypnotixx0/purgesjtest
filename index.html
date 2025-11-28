@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/Purge - Scramjet Proxy</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>/Purge</h1>
+                <span class="subtitle">Scramjet Proxy</span>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeBtn">🌙</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="hero">
+                <h2>Private Browsing</h2>
+                <p>Access the web securely with Scramjet proxy technology</p>
+            </div>
+
+            <!-- Search Box -->
+            <div class="search-container">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="urlInput" 
+                        placeholder="Enter website URL (e.g., https://example.com)" 
+                        autocomplete="off"
+                    >
+                    <button id="goBtn">
+                        <span>Go</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M10 17L15 12L10 7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-tips">
+                    <span>Tip: Include https:// for best results</span>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h3>Quick Access</h3>
+                <div class="links-grid">
+                    <button class="quick-link" data-url="https://google.com">Google</button>
+                    <button class="quick-link" data-url="https://youtube.com">YouTube</button>
+                    <button class="quick-link" data-url="https://github.com">GitHub</button>
+                    <button class="quick-link" data-url="https://discord.com">Discord</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Proxy Frame (Hidden by default) -->
+        <div id="proxyFrame" class="proxy-frame hidden">
+            <div class="frame-header">
+                <button id="backBtn" class="nav-btn">←</button>
+                <button id="forwardBtn" class="nav-btn">→</button>
+                <button id="refreshBtn" class="nav-btn">↻</button>
+                <div class="url-display" id="currentUrl"></div>
+                <button id="newTabBtn" class="nav-btn">+</button>
+                <button id="closeProxyBtn" class="nav-btn close">×</button>
+            </div>
+            <iframe 
+                id="proxyIframe" 
+                sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
+                allow="geolocation; microphone; camera; midi; encrypted-media"
+            ></iframe>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 /Purge. Powered by Scramjet Proxy.</p>
+            <p>Anyone posing as this site that isn't unhiin is false.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
